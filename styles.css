@@ -1,0 +1,190 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+header {
+    text-align: center;
+    background: #242424;
+    color: white;
+    padding: 80px 20px;
+}
+
+.title {
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: colorCycle 10s infinite linear;
+}
+
+@keyframes colorCycle {
+    0% { color: #c55500; }
+    25% { color: #008805; }
+    50% { color: #b40000; }
+    75% { color: #002dc0; }
+    100% { color: #d85e00; }
+}
+
+header p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* Sección principal */
+.main-offer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.main-offer h2 {
+    font-size: 2.5rem;
+    color: #3f51b5;
+    margin-bottom: 20px;
+}
+
+.main-offer p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #000000;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-button {
+    width: 500px;
+    text-decoration: none;
+    background-color: #0087e0;
+    color: white;
+    padding: 18px 45px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.3s ease;
+    margin-top: 30px;
+}
+
+.cta-button:hover {
+    background-color: #e91e63;
+    transform: scale(1.05);
+}
+
+/* Servicios */
+.service-container, .services {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f0f4f8;
+    justify-content: center;
+    overflow: hidden; 
+    margin-top: 20px; 
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    color: #3f51b5;
+    margin-bottom: 20px;
+}
+
+.service {
+    width: 100%;
+    height: 300px;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    z-index: -1;
+}
+
+.service.active {
+    opacity: 1; 
+    visibility: visible; 
+    z-index: 1;
+}
+
+.service:nth-child(1) {
+    background-image: url('https://www.uag.mx/contenido/wp72m5vS7M/cuanto-dura-la-carrera-de-diseno-grafico_JGD.jpg');
+}
+
+.service:nth-child(2) {
+    background-image: url('https://media.licdn.com/dms/image/v2/D4E12AQEbQP5AfyMQtg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1680622243681?e=2147483647&v=beta&t=zNGLpNJCpCLxenJJptFOuKGZT2FpAYQBOS7Jv-Zp8sA');
+}
+
+.service:nth-child(3) {
+    background-image: url('https://extremadura.openfuture.org/wp-content/uploads/2024/08/diseno-de-producto.jpg');
+}
+
+.service:nth-child(4) {
+    background-image: url('https://www.lamp.es/images/583502/default.jpg');
+}
+
+.service:nth-child(5) {
+    background-image: url('https://cdn.prod.website-files.com/63e117ea4e95a8a1b959214c/641b27ca9e3e85c3cab01bc3_mujer-tomando-fotos-su-negocio-utensilios-cocina-ceramica.jpg');
+}
+
+.service h3, .service p {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto; 
+}
+
+/* Footer */
+footer {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 20px;
+    background-color: #353535;
+    color: white;
+    margin-top: 200px;
+}
